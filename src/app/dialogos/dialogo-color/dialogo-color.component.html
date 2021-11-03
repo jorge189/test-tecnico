@@ -1,0 +1,22 @@
+<div mat-dialog-content>
+    <p></p>
+
+    <div class="card mb-3" style="max-width: 534px;">
+        <div class="row g-0 justify-content-center ">
+
+        </div>
+        <br>
+        <p style="text-align: center;color: black;">Introduce el color en hexadecimal para cambiar el color del boton.</p>
+    </div>
+    <div class="row" style="justify-content: center;">
+        <mat-form-field>
+            <mat-label>Color</mat-label>
+            <input type="text" matInput [(ngModel)]="data.color">
+
+        </mat-form-field>
+    </div>
+</div>
+<div class="text-center justify-content-center" mat-dialog-actions>
+    <button class="btn btn-outline-danger btn-sm mx-4" mat-button (click)="onNoClick()">Cerrar</button>
+    <button class="btn btn-outline-success btn-sm mx-4" [mat-dialog-close]="data.color" mat-button cdkFocusInitial>Enviar</button>
+</div>
